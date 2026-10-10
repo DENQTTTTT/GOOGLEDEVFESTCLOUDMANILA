@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-arcade {
+    font-family: 'Press Start 2P', monospace, system-ui;
+  }
+  .font-display {
+    font-family: 'Orbitron', sans-serif, system-ui;
+  }
+  .font-tech {
+    font-family: 'Rajdhani', sans-serif, system-ui;
+  }
+
+  /* Neon text shadows */
+  .neon-text-pink {
+    text-shadow: 0 0 6px #ff2a8d, 0 0 12px #ff2a8d, 0 0 24px #ff2a8d;
+  }
+  .neon-text-cyan {
+    text-shadow: 0 0 6px #00f0ff, 0 0 12px #00f0ff, 0 0 24px #00f0ff;
+  }
+  .neon-text-purple {
+    text-shadow: 0 0 6px #b026ff, 0 0 12px #b026ff, 0 0 24px #b026ff;
+  }
+  .neon-text-yellow {
+    text-shadow: 0 0 6px #ffe600, 0 0 12px #ffe600, 0 0 24px #ffe600;
+  }
+
+  /* Neon border glows */
+  .neon-border-pink {
+    box-shadow: 0 0 12px rgba(255, 42, 141, 0.45), inset 0 0 10px rgba(255, 42, 141, 0.2);
+  }
+  .neon-border-cyan {
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.45), inset 0 0 10px rgba(0, 240, 255, 0.2);
+  }
+  .neon-border-purple {
+    box-shadow: 0 0 12px rgba(176, 38, 255, 0.45), inset 0 0 10px rgba(176, 38, 255, 0.2);
+  }
+}
+
+/* CRT Scanlines and Screen Curvature effect */
+.crt-overlay {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.38) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.985; }
+  50% { opacity: 1; }
+  100% { opacity: 0.99; }
+}
+
+/* Retro grid scrolling effect */
+.retro-perspective-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 42, 141, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f071f;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff2a8d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}

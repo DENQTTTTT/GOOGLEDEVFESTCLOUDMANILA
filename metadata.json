@@ -1,0 +1,6 @@
+{
+  "name": "Neon Invaders & Synthwave Player",
+  "description": "80s vaporwave Space Invaders arcade game and synthwave music player with neon scanlines, 3 retro tracks, audio visualizer, and persistent scoreboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
